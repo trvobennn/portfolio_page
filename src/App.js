@@ -1,4 +1,6 @@
 import React from "react";
+import gitlogo from "./githublight.png";
+import linkedlogo from "./linkedinwhite.png";
 
 function Navbar (){
     return (
@@ -47,20 +49,22 @@ function Footer(){
     return (
 <footer>
     <div id="footer-links">
-        <a id="profile-link" target="_blank" href="https://www.linkedin.com/in/trvr-benntt/">
-            My LinkedIn <img src="./In-White-48.png" alt="LinkedIn logo" />
+        <a class="linkedin-link" id="profile-link" target="_blank" href="https://www.linkedin.com/in/trvr-benntt/">
+            <div id="linkedin" class="hide">My LinkedIn </div>
+            <img class="icon" src={linkedlogo} alt="LinkedIn logo" />
         </a>
         <a id="profile-link" target="_blank" href="https://github.com/trvobennn">
-            My GitHub <img src="./GitHub-Mark-Light-64px.png" alt="Github logo" />
+            <div id="git" class="hide">My GitHub </div>
+            <img class="icon" src={gitlogo} alt="Github logo" />
         </a>
-        <a id="profile-link" target="_blank" href="https://trev-site.herokuapp.com/">
+        <a class="my-site" id="profile-link" target="_blank" href="https://trev-site.herokuapp.com/">
             My Personal Site
         </a>
     </div>
 </footer>
     )}
 
-export default function App() {
+export function App() {
     return (
 <div id="App"   >
     <Navbar />
